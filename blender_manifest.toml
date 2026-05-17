@@ -14,4 +14,4 @@ license = ["SPDX:GPL-3.0-or-later"]
 website = "https://www.kiiiii.com"
 
 [permissions]
-files = "Export gradient mask images and read translation files"
+files = "Export gradient mask images"
