@@ -8,7 +8,7 @@ maintainer = "墨泪"
 type = "add-on"
 
 blender_version_min = "4.2.0"
-tags = ["Material", "Import-Export"]
+tags = ["Material"]
 
 license = ["SPDX:GPL-3.0-or-later"]
 website = "https://www.kiiiii.com"
