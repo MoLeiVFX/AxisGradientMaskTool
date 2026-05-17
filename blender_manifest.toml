@@ -1,8 +1,8 @@
 schema_version = "1.0.0"
 
-id = "axis_gradient_mask_tool"
+id = "Axis_Gradient_Mask_Tool"
 version = "1.0.0"
-name = "Axis Gradient Mask Tool"
+name = "AxisGradientMaskTool"
 tagline = "Axis Gradient Mask Export Tools"
 maintainer = "墨泪"
 type = "add-on"
