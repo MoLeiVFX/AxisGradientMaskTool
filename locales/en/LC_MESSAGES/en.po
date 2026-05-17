@@ -1,0 +1,238 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+msgid "轴向渐变遮罩工具"
+msgstr "Axis Gradient Mask Tool"
+
+msgid "根据模型在世界空间中的位置沿指定轴向生成渐变遮罩，烘焙到UV并导出为图像"
+msgstr "Generate gradient masks along specified axes based on model position in world space, bake to UV and export as image"
+
+msgid "模型没有顶点"
+msgstr "Model has no vertices"
+
+msgid "预览遮罩"
+msgstr "Preview Mask"
+
+msgid "预览定向溶解遮罩"
+msgstr "Preview directional dissolve mask"
+
+msgid "请选择一个网格对象"
+msgstr "Please select a mesh object"
+
+msgid "请选择网格对象"
+msgstr "Please select a mesh object"
+
+msgid "已更新渐变材质预览"
+msgstr "Gradient material preview updated"
+
+msgid "导出遮罩"
+msgstr "Export Mask"
+
+msgid "导出定向溶解遮罩"
+msgstr "Export directional dissolve mask"
+
+msgid "该模型没有UV层，请先展开UV"
+msgstr "This model has no UV layer. Please unwrap UV first"
+
+msgid "X轴"
+msgstr "X Axis"
+
+msgid "Y轴"
+msgstr "Y Axis"
+
+msgid "Z轴"
+msgstr "Z Axis"
+
+msgid "渐变遮罩"
+msgstr "Gradient Mask"
+
+msgid "烘焙完成 (采样数: %d)"
+msgstr "Baking completed (Samples: %d)"
+
+msgid "烘焙失败: %s"
+msgstr "Baking failed: %s"
+
+msgid "遮罩已导出到: %s (大小: %.2fMB)"
+msgstr "Mask exported to: %s (Size: %.2fMB)"
+
+msgid "执行失败: %s"
+msgstr "Execution failed: %s"
+
+msgid "渐变方向:"
+msgstr "Gradient Direction:"
+
+msgid "反转黑白渐变"
+msgstr "Invert Black/White Gradient"
+
+msgid "渐变色标:"
+msgstr "Gradient Color Ramp:"
+
+msgid "先点击预览当前遮罩生成颜色渐变节点"
+msgstr "Click Preview first to generate color gradient node"
+
+msgid "输出分辨率:"
+msgstr "Output Resolution:"
+
+msgid "宽度"
+msgstr "Width"
+
+msgid "高度"
+msgstr "Height"
+
+msgid "精度设置:"
+msgstr "Precision Settings:"
+
+msgid "色彩深度"
+msgstr "Color Depth"
+
+msgid "烘焙采样数"
+msgstr "Bake Samples"
+
+msgid "使用浮点缓冲(16位)"
+msgstr "Use Float Buffer (16-bit)"
+
+msgid "启用抗锯齿"
+msgstr "Enable Anti-Aliasing"
+
+msgid "8位: 256级灰度"
+msgstr "8-bit: 256 levels of gray"
+
+msgid "16位: 65536级灰度"
+msgstr "16-bit: 65536 levels of gray"
+
+msgid "32位: 42亿级灰度"
+msgstr "32-bit: 4.2 billion levels of gray"
+
+msgid "导出设置:"
+msgstr "Export Settings:"
+
+msgid "文件名"
+msgstr "File Name"
+
+msgid "默认"
+msgstr "Default"
+
+msgid "保存位置"
+msgstr "Save Location"
+
+msgid "默认目录"
+msgstr "Default Directory"
+
+msgid "预览当前遮罩"
+msgstr "Preview Current Mask"
+
+msgid "生成并导出遮罩"
+msgstr "Generate and Export Mask"
+
+msgid "版本信息:"
+msgstr "Version Info:"
+
+msgid "插件版本"
+msgstr "Plugin Version"
+
+msgid "作者"
+msgstr "Author"
+
+msgid "墨泪"
+msgstr "MoLei"
+
+msgid "主页"
+msgstr "Website"
+
+msgid "轴向"
+msgstr "Axis"
+
+msgid "选择渐变方向的世界坐标轴"
+msgstr "Select world axis for gradient direction"
+
+msgid "沿X轴方向渐变（左黑右白）"
+msgstr "Gradient along X-axis (Left black, Right white)"
+
+msgid "沿Y轴方向渐变（前黑后白）"
+msgstr "Gradient along Y-axis (Front black, Back white)"
+
+msgid "沿Z轴方向渐变（下黑上白）"
+msgstr "Gradient along Z-axis (Bottom black, Top white)"
+
+msgid "反转渐变"
+msgstr "Invert Gradient"
+
+msgid "反转当前轴向的黑白渐变方向"
+msgstr "Invert the black/white gradient direction of current axis"
+
+msgid "黑场位置"
+msgstr "Black Point Position"
+
+msgid "颜色渐变中黑色端的位置"
+msgstr "Position of black end in color gradient"
+
+msgid "白场位置"
+msgstr "White Point Position"
+
+msgid "颜色渐变中白色端的位置"
+msgstr "Position of white end in color gradient"
+
+msgid "黑场颜色"
+msgstr "Black Point Color"
+
+msgid "颜色渐变的低值端颜色"
+msgstr "Color of low value end in gradient"
+
+msgid "白场颜色"
+msgstr "White Point Color"
+
+msgid "颜色渐变的高值端颜色"
+msgstr "Color of high value end in gradient"
+
+msgid "导出图像的宽度（像素）"
+msgstr "Width of exported image (pixels)"
+
+msgid "导出图像的高度（像素）"
+msgstr "Height of exported image (pixels)"
+
+msgid "图像色彩深度（更高的深度意味着更平滑的渐变）"
+msgstr "Image color depth (higher depth means smoother gradient)"
+
+msgid "8位 (256级)"
+msgstr "8-bit (256 levels)"
+
+msgid "标准PNG，文件较小"
+msgstr "Standard PNG, smaller file size"
+
+msgid "16位 (65536级)"
+msgstr "16-bit (65536 levels)"
+
+msgid "更高精度，文件较大"
+msgstr "Higher precision, larger file size"
+
+msgid "采样数"
+msgstr "Sample Count"
+
+msgid "烘焙采样数（越高越精确，但耗时更长）"
+msgstr "Bake sample count (higher is more accurate but slower)"
+
+msgid "使用浮点缓冲"
+msgstr "Use Float Buffer"
+
+msgid "使用16位浮点缓冲区存储图像（提高渐变平滑度）"
+msgstr "Use 16-bit float buffer for image storage (improves gradient smoothness)"
+
+msgid "抗锯齿"
+msgstr "Anti-Aliasing"
+
+msgid "启用烘焙抗锯齿（使边缘更平滑）"
+msgstr "Enable bake anti-aliasing (smoother edges)"
+
+msgid "导出的文件名（不包含扩展名，留空则使用默认命名：模型名_轴向渐变遮罩）"
+msgstr "Export file name (without extension, leave empty for default: modelname_axis_gradient_mask)"
+
+msgid "遮罩图像的保存目录（留空则保存在当前Blender文件所在目录）"
+msgstr "Save directory for mask image (leave empty to save in current Blender file directory)"
+
+msgid "轴向渐变遮罩工具插件已加载 (AGMT)"
+msgstr "Axis Gradient Mask Tool plugin loaded (AGMT)"
+
+msgid "轴向渐变遮罩工具插件已卸载 (AGMT)"
+msgstr "Axis Gradient Mask Tool plugin unloaded (AGMT)"

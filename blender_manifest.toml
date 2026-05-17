@@ -1,0 +1,17 @@
+schema_version = "1.0.0"
+
+id = "axis_gradient_mask_tool"
+version = "1.0.0"
+name = "Axis Gradient Mask Tool"
+tagline = "Axis Gradient Mask Export Tools"
+maintainer = "墨泪"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+tags = ["Material", "Import-Export"]
+
+license = ["SPDX:GPL-3.0-or-later"]
+website = "https://www.kiiiii.com"
+
+[permissions]
+files = "Export gradient mask images and read translation files"
