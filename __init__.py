@@ -153,6 +153,18 @@ def update_gradient_preview(self, context):
         context.scene.gradient_invert
     )
 
+def make_unique_export_path(export_path):
+    directory = os.path.dirname(export_path)
+    base_name = os.path.splitext(os.path.basename(export_path))[0]
+    extension = os.path.splitext(export_path)[1] or ".png"
+
+    unique_path = export_path
+    index = 1
+    while os.path.exists(unique_path):
+        unique_path = os.path.join(directory, f"{base_name}_{index:03d}{extension}")
+        index += 1
+    return unique_path
+
 def apply_gradient_material(obj, axis, invert_gradient, black_position=None, white_position=None, black_color=None, white_color=None, bake_image=None):
     # 计算物体在世界空间中的最小和最大坐标
     world_verts = [obj.matrix_world @ v.co for v in obj.data.vertices]
@@ -355,11 +367,27 @@ class OBJECT_OT_ExportGradientMask(bpy.types.Operator):
                 # 默认使用模型名称+轴向
                 axis_names = {'X': _("X轴"), 'Y': _("Y轴"), 'Z': _("Z轴")}
                 image_name = f"{obj.name}_{axis_names[axis]}{_('渐变遮罩')}"
-            
-            # 删除可能存在的同名图像
-            if image_name in bpy.data.images:
-                img_old = bpy.data.images[image_name]
-                bpy.data.images.remove(img_old)
+
+            # 导出图像路径。若文件已存在，自动追加序号，避免覆盖已有遮罩。
+            export_path = scene.gradient_export_path
+            if not export_path:
+                if bpy.data.filepath:
+                    export_dir = os.path.dirname(bpy.data.filepath)
+                else:
+                    export_dir = os.path.expanduser("~")
+                export_path = os.path.join(export_dir, f"{image_name}.png")
+            else:
+                if os.path.isdir(export_path):
+                    export_path = os.path.join(export_path, f"{image_name}.png")
+                else:
+                    export_dir = os.path.dirname(export_path)
+                    if export_dir:
+                        os.makedirs(export_dir, exist_ok=True)
+                    if not export_path.lower().endswith('.png'):
+                        export_path += '.png'
+
+            export_path = make_unique_export_path(export_path)
+            image_name = os.path.splitext(os.path.basename(export_path))[0]
             
             # 创建高精度图像
             # 使用浮点缓冲区
@@ -445,26 +473,6 @@ class OBJECT_OT_ExportGradientMask(bpy.types.Operator):
             except Exception as e:
                 self.report({'ERROR'}, _("烘焙失败: %s") % str(e))
                 return {'CANCELLED'}
-
-            # 导出图像
-            export_path = scene.gradient_export_path
-            if not export_path:
-                # 默认导出到当前文件的目录
-                if bpy.data.filepath:
-                    export_dir = os.path.dirname(bpy.data.filepath)
-                else:
-                    export_dir = os.path.expanduser("~")
-                export_path = os.path.join(export_dir, f"{image_name}.png")
-            else:
-                # 如果用户指定了路径，检查是目录还是完整文件名
-                if os.path.isdir(export_path):
-                    # 如果是目录，使用自定义名称
-                    export_path = os.path.join(export_path, f"{image_name}.png")
-                else:
-                    # 如果是文件路径，确保目录存在
-                    os.makedirs(os.path.dirname(export_path), exist_ok=True)
-                    if not export_path.lower().endswith('.png'):
-                        export_path += '.png'
             
             # 设置导出图像的颜色深度
             if hasattr(scene.render, 'image_settings'):

@@ -157,6 +157,7 @@ This section controls the file name and save location.
 - **Description**:
   - If left empty, the add-on uses the default name: `ObjectName_AxisGradientMask.png`
   - Invalid file-name characters are automatically replaced with `_`
+  - If a file with the same name already exists, the add-on appends `_001`, `_002`, and so on
 
 #### Save Location
 
@@ -166,6 +167,7 @@ This section controls the file name and save location.
   - If the current Blender file is saved, an empty path exports to the `.blend` file directory
   - If the current Blender file has not been saved, an empty path exports to the user home directory
   - If a full file path is provided and it does not end with `.png`, the add-on appends `.png`
+  - Existing PNG files are kept; new exports use the next available numbered name
 
 ---
 
